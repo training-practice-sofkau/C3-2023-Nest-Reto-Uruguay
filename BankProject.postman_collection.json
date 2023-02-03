@@ -1,0 +1,1061 @@
+{
+	"info": {
+		"_postman_id": "5ace7951-1615-4f5b-b109-6b40be797fb8",
+		"name": "BankProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25064257"
+	},
+	"item": [
+		{
+			"name": "AccountController",
+			"item": [
+				{
+					"name": "CreateAdditionalSavingAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"45e100f4-e171-4847-9dae-cd901a6b3d75\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/account/create-additional-saving-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"create-additional-saving-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAdditionalCheckingAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"98c2bdf6-70b5-4ae0-8516-6bae0967172e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/account/create-additional-checking-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"create-additional-checking-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAccount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountType\": \"3767ee2f-0cc8-40b2-bf7c-e53b1e6e03ca\",\r\n    \"balance\": 500,\r\n    \"state\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/account/update/4cd550c9-f40a-4122-a77d-4b0b01109089",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"update",
+								"4cd550c9-f40a-4122-a77d-4b0b01109089"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SoftDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/account/soft-delete/4cd550c9-f40a-4122-a77d-4b0b01109089",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"soft-delete",
+								"4cd550c9-f40a-4122-a77d-4b0b01109089"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HardDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/account/hard-delete/2b4be798-ac6b-4b44-8c9c-7e2d6ae84a17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"hard-delete",
+								"2b4be798-ac6b-4b44-8c9c-7e2d6ae84a17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/account/find-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"find-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllAccountTypes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offset\": 0\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/account/account-type/find-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"account-type",
+								"find-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/account/find/4cd550c9-f40a-4122-a77d-4b0b01109089",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"find",
+								"4cd550c9-f40a-4122-a77d-4b0b01109089"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByCustomer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offset\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/account/find-by-customer/fbc05f9a-56ea-49aa-97ed-3ed54359cac3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"find-by-customer",
+								"fbc05f9a-56ea-49aa-97ed-3ed54359cac3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBalance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/account/balance/4cd550c9-f40a-4122-a77d-4b0b01109089",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"balance",
+								"4cd550c9-f40a-4122-a77d-4b0b01109089"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAccountType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/account/account-type/4cd550c9-f40a-4122-a77d-4b0b01109089",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"account-type",
+								"4cd550c9-f40a-4122-a77d-4b0b01109089"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/account/customer/4cd550c9-f40a-4122-a77d-4b0b01109089",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"customer",
+								"4cd550c9-f40a-4122-a77d-4b0b01109089"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getState",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/account/state/4cd550c9-f40a-4122-a77d-4b0b01109089",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"state",
+								"4cd550c9-f40a-4122-a77d-4b0b01109089"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addBalance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"balance\": 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/account/add-balance/4cd550c9-f40a-4122-a77d-4b0b01109089",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"add-balance",
+								"4cd550c9-f40a-4122-a77d-4b0b01109089"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changeAccountType",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountType\": \"b19e7699-9b62-4055-83a4-3d9c44099b30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/account/change-account-type/4cd550c9-f40a-4122-a77d-4b0b01109089",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"change-account-type",
+								"4cd550c9-f40a-4122-a77d-4b0b01109089"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeBalanceAll",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/account/remove-all-balance/4cd550c9-f40a-4122-a77d-4b0b01109089",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"remove-all-balance",
+								"4cd550c9-f40a-4122-a77d-4b0b01109089"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changeState",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/account/change-state/abe6cfe3-4e3d-45bf-8099-4d325d6bb331",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"change-state",
+								"abe6cfe3-4e3d-45bf-8099-4d325d6bb331"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeBalance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"balance\": 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/account/remove-balance/6821d657-67c0-4e91-8b8f-4426c5d62177",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account",
+								"remove-balance",
+								"6821d657-67c0-4e91-8b8f-4426c5d62177"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerController",
+			"item": [
+				{
+					"name": "UpdateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"documentType\": \"0ee80e08-919d-4acb-a7a3-126a04f46e95\",\r\n    \"document\": \"98745613\",\r\n    \"email\": \"domor48472@ekcsoft.com\",\r\n    \"fullName\": \"Mateo Caraballo\",\r\n    \"password\": \"alfa9875\",\r\n    \"phone\": \"091111111\",\r\n    \"state\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer/update/7185242d-6599-480c-a15f-93db672afe27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"update",
+								"7185242d-6599-480c-a15f-93db672afe27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SoftDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customer/soft-delete/7185242d-6599-480c-a15f-93db672afe27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"soft-delete",
+								"7185242d-6599-480c-a15f-93db672afe27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HardDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customer/hard-delete/c1afa70f-39d0-45c8-bc4d-3681f0cfef3a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"hard-delete",
+								"c1afa70f-39d0-45c8-bc4d-3681f0cfef3a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomerInfo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customer/find/a6b4aefa-ddf9-40df-8a19-2175236be2d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"find",
+								"a6b4aefa-ddf9-40df-8a19-2175236be2d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customer/find-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"find-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllDocumentType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customer/document-type/find-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"document-type",
+								"find-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changeState",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer/change-state/d90aeac3-2ea7-4856-bd25-f61f0532982c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"change-state",
+								"d90aeac3-2ea7-4856-bd25-f61f0532982c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findDocumentType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customer/document-type/1f16b13f-6790-4d1f-bcec-fd101096561e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"document-type",
+								"1f16b13f-6790-4d1f-bcec-fd101096561e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DepositController",
+			"item": [
+				{
+					"name": "createDeposit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountId\": \"5fc07893-d45c-47ab-b7d1-dbcd5f97b543\",\r\n    \"amount\": 400\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/deposit/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deposit",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/deposit/find-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deposit",
+								"find-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SoftDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/deposit/soft-delete/9174c0cc-a269-42f8-affe-621e5eafb260",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deposit",
+								"soft-delete",
+								"9174c0cc-a269-42f8-affe-621e5eafb260"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HardDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/deposit/soft-delete/e63b3131-4f6f-41f0-a43d-d8f56b9c52ba",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deposit",
+								"soft-delete",
+								"e63b3131-4f6f-41f0-a43d-d8f56b9c52ba"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccountHistoty",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offset\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/deposit/get-history/5fc07893-d45c-47ab-b7d1-dbcd5f97b543",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deposit",
+								"get-history",
+								"5fc07893-d45c-47ab-b7d1-dbcd5f97b543"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SecurityController",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"documentTypeId\": \"251cb3ac-8f19-4f94-825a-26d1e08df7c3\",\r\n    \"document\": \"31411511541\",\r\n    \"fullName\": \"Rodrigo Caraballo\",\r\n    \"email\": \"domor48472@ekcsoft.com\",\r\n    \"phone\": \"090000000\",\r\n    \"password\": \"alfa1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/security/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"security",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"domor48472@ekcsoft.com\",\r\n    \"password\": \"alfa1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/security/signIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"security",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SingOut",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/security/signOut/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRvbW9yNDg0NzJAZWtjc29mdC5jb20iLCJpYXQiOjE2NzUxOTMwMjd9.ViG5-hjOY3jUMyV5upNcAWeQW2fjrUBhqcCusr5p7t4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"security",
+								"signOut",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRvbW9yNDg0NzJAZWtjc29mdC5jb20iLCJpYXQiOjE2NzUxOTMwMjd9.ViG5-hjOY3jUMyV5upNcAWeQW2fjrUBhqcCusr5p7t4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TransferController",
+			"item": [
+				{
+					"name": "createTransfer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"outcome\": \"25bf90f1-f7db-4f71-9053-307067327c1e\",\r\n    \"income\": \"0bfa1d1b-9077-4c7c-b5d1-0f850965186a\",\r\n    \"amount\": 100,\r\n    \"reason\": \"deudas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/transfer/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transfer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offset\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/transfer/find-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transfer",
+								"find-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHistoryOut",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offset\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/transfer/get-history-out/63f61934-6437-4e06-a085-13ba6b79d9fb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transfer",
+								"get-history-out",
+								"63f61934-6437-4e06-a085-13ba6b79d9fb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHistoryIncome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/transfer/get-history-in/63f61934-6437-4e06-a085-13ba6b79d9fb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transfer",
+								"get-history-in",
+								"63f61934-6437-4e06-a085-13ba6b79d9fb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/transfer/get-history/63f61934-6437-4e06-a085-13ba6b79d9fb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transfer",
+								"get-history",
+								"63f61934-6437-4e06-a085-13ba6b79d9fb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SoftDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/transfer/soft-delete/b148f59a-0b10-4b82-8511-d84428135d0f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transfer",
+								"soft-delete",
+								"b148f59a-0b10-4b82-8511-d84428135d0f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HardDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/transfer/hard-delete/16210b72-b126-4042-b782-72933e2a76c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transfer",
+								"hard-delete",
+								"16210b72-b126-4042-b782-72933e2a76c5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
