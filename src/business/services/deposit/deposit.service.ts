@@ -32,7 +32,7 @@ export class DepositService {
     const account = this.accountService.findOneById(deposit.accountId);
     const accountDTO = new AccountDTO();
 
-    // accountDTO.balance = deposit.amount;
+    accountDTO.balance = deposit.amount;
 
     newDeposit.account = account;
     newDeposit.amount = deposit.amount;
